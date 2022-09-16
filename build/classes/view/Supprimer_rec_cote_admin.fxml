@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="166.0" prefWidth="426.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Supprimer_rec_cote_adminController">
+   <children>
+      <AnchorPane layoutX="80.0" layoutY="33.0" prefHeight="78.0" prefWidth="229.0">
+         <children>
+            <Label text="Id reclamation" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <ComboBox fx:id="list_id" layoutX="10.0" layoutY="27.0" prefHeight="25.0" prefWidth="213.0" />
+            <Label fx:id="response" layoutX="115.0" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="btnsupp" layoutX="327.0" layoutY="127.0" mnemonicParsing="false" onAction="#supp_rec_on_action" text="confirmer" />
+      <Button layoutX="253.0" layoutY="127.0" mnemonicParsing="false" text="annuler" />
+   </children>
+</AnchorPane>

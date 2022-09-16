@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="715.0" prefWidth="942.0" style="-fx-background-color: #5097A4;" styleClass="linear-Apane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_client.AjoutReclamationController">
+   <children>
+      <Label alignment="CENTER" layoutX="3.0" layoutY="5.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" text="Ajouter reclamation" textFill="#220000">
+         <font>
+            <Font name="Verdana Bold" size="41.0" />
+         </font>
+      </Label>
+      <Pane layoutX="14.0" layoutY="57.0" prefHeight="391.0" prefWidth="920.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="btnAjoutRec" layoutX="657.0" layoutY="348.0" mnemonicParsing="false" onAction="#Ajouter_Rec_On_Action" text="Ajouter" />
+            <Button fx:id="btnAjoutReclamation" layoutX="817.0" layoutY="346.0" mnemonicParsing="false" onAction="#Supp_Rec_On_Action" text="Supprimer" />
+            <Button fx:id="btnModifierRec" layoutX="728.0" layoutY="347.0" mnemonicParsing="false" onAction="#Modifier_Rec_On_Action" prefHeight="25.0" prefWidth="75.0" text="Modifier" />
+            <Separator layoutX="14.0" layoutY="49.0" prefHeight="2.0" prefWidth="896.0" />
+            <Label fx:id="lblDate" layoutX="178.0" layoutY="11.0" prefHeight="34.0" prefWidth="127.0" text="2021-09-01">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="91.0" layoutY="11.0" prefHeight="25.0" prefWidth="92.0" text="Date :">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label layoutX="621.0" layoutY="11.0" prefHeight="34.0" prefWidth="98.0" text="Heure:">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblHeure" layoutX="694.0" layoutY="11.0" prefHeight="34.0" prefWidth="127.0" text="11.23.10" textFill="#110000">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="209.0" layoutY="66.0" prefHeight="47.0" prefWidth="281.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtNom" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="258.0" promptText="Ecrivez votre nom" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Nom:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="499.0" layoutY="66.0" prefHeight="47.0" prefWidth="113.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtPrenom" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="87.0" promptText="Ecrivez votre prenom" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Prenom" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="638.0" layoutY="66.0" prefHeight="47.0" prefWidth="258.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtTel" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="229.0" promptText="Ecrivez votre telephone" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Tel:" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="209.0" layoutY="122.0" prefHeight="47.0" prefWidth="291.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtMail" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="258.0" promptText="Ecrivez votre email" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Mail :" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="209.0" layoutY="188.0" prefHeight="47.0" prefWidth="245.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtMission" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="229.0" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Titre mission" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="505.0" layoutY="187.0" prefHeight="47.0" prefWidth="391.0" styleClass="textPane">
+               <children>
+                  <TextField fx:id="txtMissionDesc" layoutX="6.0" layoutY="8.0" prefHeight="37.0" prefWidth="375.0" promptText="Décrivez brievement ce qui passé" styleClass="textField" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Description Mission :" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="210.0" layoutY="247.0" prefHeight="60.0" prefWidth="229.0" styleClass="textPane">
+               <children>
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Date mission :" AnchorPane.topAnchor="3.0" />
+                  <JFXDatePicker fx:id="txtDate" layoutX="14.0" layoutY="29.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="514.0" layoutY="247.0" prefHeight="78.0" prefWidth="229.0">
+               <children>
+                  <Label text="Nom prestataire :" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <ComboBox fx:id="listprest" layoutX="10.0" layoutY="27.0" prefHeight="25.0" prefWidth="213.0" />
+                  <Label fx:id="response" layoutX="115.0" text="xx" />
+               </children>
+            </AnchorPane>
+            <Button fx:id="btnListeRec" layoutX="489.0" layoutY="348.0" mnemonicParsing="false" onAction="#remplirTab" prefHeight="25.0" prefWidth="149.0" text="Charger liste reclamation" />
+         </children>
+      </Pane>
+      <TableView fx:id="tableReclamation" layoutX="11.0" layoutY="470.0" prefHeight="231.0" prefWidth="920.0">
+         <columns>
+            <TableColumn fx:id="colId" prefWidth="61.0" text="ID" />
+            <TableColumn fx:id="colNom" prefWidth="67.0" text="Nom" />
+            <TableColumn fx:id="colPrenom" prefWidth="75.0" text="Prenom" />
+            <TableColumn fx:id="colTel" prefWidth="76.0" text="Tel" />
+            <TableColumn fx:id="colMail" prefWidth="111.0" text="Mail" />
+            <TableColumn fx:id="colMission" prefWidth="115.0" text="Titre mission" />
+            <TableColumn fx:id="colMDate" minWidth="0.0" prefWidth="89.0" text="Date mission" />
+            <TableColumn fx:id="col_Nom_Prestataire" prefWidth="118.0" text="Nom prestataire" />
+            <TableColumn fx:id="colDescM" prefWidth="207.0" text="Description mission" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>
