@@ -40,25 +40,21 @@ import testconnrapidservice.reclamationService;
 
 public class ModifierRecController implements Initializable {
 
-    @FXML
-    private Button btnConf_Modif_Reclamation;
-    @FXML
-    private Button btnAnnuler;
-    @FXML
-    private Label lblDate;
-    @FXML
-    private Label lblHeure;
-    private TextField txtNom;
-    private TextField txtPrenom;
-    private TextField txtTel;
-    private TextField txtMail;
-    private TextField txtMission;
-    private TextField txtMissionDesc;
-    private DatePicker txtDate;
-    private ComboBox<String> txtNomPrestataire;
-    @FXML
-    private ComboBox<String> reclamationId;
-
+    @FXML private Button btnConf_Modif_Reclamation;
+    @FXML private Button btnAnnuler;
+    @FXML private Label lblDate;
+    @FXML private Label lblHeure;
+     @FXML private TextField txtNom;
+    @FXML private TextField txtPrenom;
+     @FXML private TextField txtTel;
+     @FXML private TextField txtMail;
+     @FXML private TextField txtMission;
+     @FXML private TextField txtMissionDesc;
+     @FXML private DatePicker txtDate;
+    @FXML private ComboBox<String> txtNomPrestataire;
+    @FXML  private ComboBox<String> reclamationId;
+    @FXML private Label response;
+    
    private String responsePREST ,responseID;
    private Alert alertModification= new Alert(Alert.AlertType.INFORMATION);
     
@@ -90,8 +86,8 @@ public class ModifierRecController implements Initializable {
     private void loadNomsPrestataire() throws SQLException, ClassNotFoundException {
         reclamationService recservice= new reclamationService();
        
-        List<String> NomsPrestataire = recservice.getPrestataireNames();
-        txtNomPrestataire.getItems().addAll( NomsPrestataire);
+        ArrayList<String> NomsPrestataire = recservice.getPrestataireNames();
+        txtNomPrestataire.getItems().addAll(NomsPrestataire);
     }
     
     
@@ -115,8 +111,6 @@ public class ModifierRecController implements Initializable {
     @FXML
     private void Confirmer_Modif_Rec_On_Action(ActionEvent event) throws SQLException, ClassNotFoundException {
         
-        // recuperer le nom dutilisateur choisie
-        
         reclamationService recservice= new reclamationService();
         ArrayList<String> listN=  recservice.getPrestataireNames();
         ArrayList<String> listId=  recservice.getReclamationIds();
@@ -127,7 +121,7 @@ public class ModifierRecController implements Initializable {
         SingleSelectionModel<String> nomchoisie= txtNomPrestataire.getSelectionModel();
          SingleSelectionModel<String> idchoisie= reclamationId.getSelectionModel();
        nomchoisie.selectedItemProperty().addListener((ObservableValue<? extends String> changed, String oldVal, String newVal) -> {
-           responsePREST=newVal;
+           response.setText(":"+newVal);
         });
        idchoisie.selectedItemProperty().addListener((ObservableValue<? extends String> changed, String oldVal, String newVal) -> {
            responseID=newVal;
@@ -148,25 +142,13 @@ public class ModifierRecController implements Initializable {
       recservice.updateReclamation(rec,index);
         alertModification.setTitle("Infos");
             alertModification.setHeaderText(null);
-            alertModification.setContentText("Modification de reclamation n :"+responsePREST+" valide");
+            alertModification.setContentText("Modification de reclamation valide");
             alertModification.showAndWait();
     }
 
     @FXML
     private void Annuler_Modifier_Rec_On_Action(ActionEvent event) throws IOException {
-//        Stage primaryStage= new Stage() ;
-//        Parent root = FXMLLoader.load(getClass().getResource("../view_cote_client/AjoutReclamation.fxml"));
-//        primaryStage.setTitle("Suppression d'une reclamation");
-//        primaryStage.setScene(new Scene(root));
-//        primaryStage.show();
-
-            Parent modificationParent = FXMLLoader.load(getClass().getResource("../view_cote_client/AjoutReclamation.fxml"));
-        Scene modificationScene = new Scene(modificationParent);
-        
-        //This line gets the Stage information
-        Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-        
-        window.setScene(modificationScene);
-        window.show();
+    Stage stage =(Stage) txtNom.getScene().getWindow();
+    stage.close();
     }
 }

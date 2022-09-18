@@ -14,7 +14,7 @@ public class maintestadmin extends Application {
     
     @Override
     public void start(Stage primaryStage) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("../view/EspaceAdmin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../view_cote_admin/EspaceAdmin.fxml"));
         primaryStage.setTitle("Espace admin ");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

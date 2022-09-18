@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="715.0" prefWidth="942.0" style="-fx-background-color: #5097A4;" styleClass="linear-Apane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Gestion_Rec_Cote_AdminController">
+<AnchorPane prefHeight="715.0" prefWidth="942.0" style="-fx-background-color: #5097A4;" styleClass="linear-Apane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_admin.Gestion_Rec_Cote_AdminController">
    <children>
       <Label alignment="CENTER" layoutX="3.0" layoutY="5.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" text="gestion des reclamations" textFill="#220000">
          <font>

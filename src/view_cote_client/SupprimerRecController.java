@@ -16,9 +16,12 @@ import javafx.animation.Timeline;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.SingleSelectionModel;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 import testconnrapidservice.reclamationService;
 
@@ -36,6 +39,7 @@ public class SupprimerRecController implements Initializable {
     @FXML
     private ComboBox<String> reclamationId;
 
+    private Alert alertsupp= new Alert(Alert.AlertType.INFORMATION);
    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -76,11 +80,21 @@ public class SupprimerRecController implements Initializable {
         reclamationId.getItems().addAll(listIdRec);
     }
     @FXML
-    private void Confirmer_Modif_Rec_On_Action(ActionEvent event) {
+    private void Confirmer_Modif_Rec_On_Action(ActionEvent event) throws SQLException, ClassNotFoundException {
+        reclamationService recservice= new reclamationService();
+        SingleSelectionModel<String> idchoisie= reclamationId.getSelectionModel();
+        recservice.deleteReclamation( Integer.parseInt(idchoisie.getSelectedItem()));
+    
+        alertsupp.setTitle("Infos");
+            alertsupp.setHeaderText(null);
+            alertsupp.setContentText("Suppression de reclamation valide");
+            alertsupp.showAndWait();
     }
 
     @FXML
     private void Annuler_Modifier_Rec_On_Action(ActionEvent event) {
+       Stage stage =(Stage) btnAnnuler.getScene().getWindow();
+       stage.close();
     }
     
 }

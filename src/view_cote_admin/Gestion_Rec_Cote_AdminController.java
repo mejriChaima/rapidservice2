@@ -1,5 +1,5 @@
 
-package view;
+package view_cote_admin;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -119,7 +119,7 @@ private void loadDateAndTime() {
 
         @FXML
     void Supp_Rec_On_Action(ActionEvent event) throws IOException {
-     fxmlLoader = new FXMLLoader(getClass().getResource("../view/Supprimer_rec_cote_admin.fxml"));
+     fxmlLoader = new FXMLLoader(getClass().getResource("../view_cote_admin/Supprimer_rec_cote_admin.fxml"));
                 root1 = (Parent) fxmlLoader.load();
                 stage = new Stage();
                 stage.setTitle("Suppression");

@@ -1,5 +1,5 @@
 
-package view;
+package view_cote_admin;
 
 import java.io.IOException;
 import javafx.event.ActionEvent;
@@ -19,7 +19,7 @@ public class EspaceAdminController {
      @FXML
     public void gestionReclamation_Admin_OnAction(ActionEvent actionEvent) throws IOException {
         Stage primaryStage= new Stage() ;
-        Parent root = FXMLLoader.load(getClass().getResource("../view/Gestion_Rec_Cote_Admin.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../view_cote_admin/Gestion_Rec_Cote_Admin.fxml"));
         primaryStage.setTitle("Gérer  reclamations ");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();

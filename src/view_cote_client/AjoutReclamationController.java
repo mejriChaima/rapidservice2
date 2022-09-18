@@ -4,7 +4,11 @@ package view_cote_client;
 import com.jfoenix.controls.JFXDatePicker;
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.ArrayList;
@@ -29,6 +33,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.TableColumn;
@@ -37,6 +42,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import testconnrapidservice.DataSource;
 import testconnrapidservice.Reclamation;
 import testconnrapidservice.reclamationService;
 
@@ -96,11 +102,22 @@ public class AjoutReclamationController implements Initializable {
     
     private Alert alertAjout = new Alert(Alert.AlertType.INFORMATION);
     
+     private Connection cnx;
+    private Statement ste;
+    private PreparedStatement pst;
+    private ResultSet rs;
+    
+    @FXML
+    private Hyperlink log_out;
+
+    @FXML
+    private Label welcome_user;
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
             loadNomsPrestataire();
              loadDateAndTime();
+            Data_to_Table();
         } catch (SQLException ex) {
             Logger.getLogger(AjoutReclamationController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
@@ -223,4 +240,52 @@ public class AjoutReclamationController implements Initializable {
         tableReclamation.setItems(obs);
     }
     
+    //
+    //Affichage des reclamations d'un utilisateur
+    public void Data_to_Table()
+      {
+             cnx = DataSource.getInstance().getConnection();
+          ObservableList<Reclamation> listREC = FXCollections.observableArrayList();
+          String usernom = txtNom.getText();
+          try
+                {    
+                    pst = cnx.prepareStatement("SELECT * FROM reclamation WHERE nom='"+ usernom + "';");  
+                    ResultSet rs = pst.executeQuery();
+                    {
+                        while (rs.next())
+                            {
+                                Reclamation rec = new Reclamation();
+                                rec.setnRec(Integer.parseInt(rs.getString("nRec")));
+                                rec.setNom(rs.getString("nom"));
+                                rec.setPrenom(rs.getString("prenom"));
+                                rec.setEmail(rs.getString("email"));
+                                rec.setTel(Integer.parseInt(rs.getString("tel")));
+                                rec.setMission(rs.getString("mission"));
+                                rec.setDatemission(rs.getString("datemission"));
+                                rec.setNomPrestataire(rs.getString("nomPrestataire"));
+                                rec.setMissionDesc(rs.getString("missionDesc"));
+
+                                listREC.add(rec);
+                            }
+                    }
+
+                    tableReclamation.setItems(listREC);
+                    
+                    colId.setCellValueFactory(new PropertyValueFactory<>("nRec"));
+                    colNom.setCellValueFactory(new PropertyValueFactory<>("nom"));
+                    colPrenom.setCellValueFactory(new PropertyValueFactory<>("prenom"));
+                    colMail.setCellValueFactory(new PropertyValueFactory<>("email"));
+                    colTel.setCellValueFactory(new PropertyValueFactory<>("tel"));
+                    colMission.setCellValueFactory(new PropertyValueFactory<>("mission"));
+                    colMDate.setCellValueFactory(new PropertyValueFactory<>("datemission"));
+                    col_Nom_Prestataire.setCellValueFactory(new PropertyValueFactory<>("nomPrestataire"));
+                    colDescM.setCellValueFactory(new PropertyValueFactory<>("missionDesc"));
+                  }
+   
+            catch (SQLException ex)
+                {
+                    Logger.getLogger(reclamationService.class.getName()).log(Level.SEVERE, null, ex);
+                }
+    
+}
 }

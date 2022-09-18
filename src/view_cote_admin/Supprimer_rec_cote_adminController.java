@@ -1,5 +1,5 @@
 
-package view;
+package view_cote_admin;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -9,6 +9,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.stage.Stage;
 import testconnrapidservice.reclamationService;
 
 
@@ -50,9 +51,10 @@ public class Supprimer_rec_cote_adminController  {
     }
     @FXML
     public void close_on_action(ActionEvent event){
-    
+     Stage stage =(Stage) list_id.getScene().getWindow();
+       stage.close();
     }
-    
+   
     
     
     
