@@ -34,8 +34,9 @@ import javafx.scene.control.SingleSelectionModel;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import testconnrapidservice.Reclamation;
-import testconnrapidservice.reclamationService;
+import entite.Reclamation;
+import javafx.scene.control.Hyperlink;
+import service.reclamationService;
 
 
 public class ModifierRecController implements Initializable {
@@ -54,7 +55,8 @@ public class ModifierRecController implements Initializable {
     @FXML private ComboBox<String> txtNomPrestataire;
     @FXML  private ComboBox<String> reclamationId;
     @FXML private Label response;
-    
+     @FXML private Hyperlink log_out;
+     @FXML private Label welcome_user;
    private String responsePREST ,responseID;
    private Alert alertModification= new Alert(Alert.AlertType.INFORMATION);
     

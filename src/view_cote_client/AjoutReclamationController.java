@@ -42,9 +42,10 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import testconnrapidservice.DataSource;
-import testconnrapidservice.Reclamation;
-import testconnrapidservice.reclamationService;
+import BD.DataSource;
+import com.jfoenix.controls.JFXComboBox;
+import entite.Reclamation;
+import service.reclamationService;
 
 
 public class AjoutReclamationController implements Initializable {
@@ -73,8 +74,9 @@ public class AjoutReclamationController implements Initializable {
     private TextField txtMissionDesc;
     @FXML
     private JFXDatePicker txtDate;
+    
     @FXML
-    private ComboBox<String> listprest;
+    private JFXComboBox<String> listprest;
     @FXML
     private Label response;
     @FXML
@@ -99,6 +101,11 @@ public class AjoutReclamationController implements Initializable {
     private TableColumn<Reclamation,String> col_Nom_Prestataire;
     @FXML
     private TableColumn<Reclamation,String> colDescM;
+     @FXML
+    private Hyperlink log_out;
+
+    @FXML
+    private Label welcome_user;
     
     private Alert alertAjout = new Alert(Alert.AlertType.INFORMATION);
     
@@ -107,11 +114,7 @@ public class AjoutReclamationController implements Initializable {
     private PreparedStatement pst;
     private ResultSet rs;
     
-    @FXML
-    private Hyperlink log_out;
-
-    @FXML
-    private Label welcome_user;
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {

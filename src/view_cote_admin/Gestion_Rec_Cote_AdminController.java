@@ -1,6 +1,7 @@
 
 package view_cote_admin;
 
+import com.jfoenix.controls.JFXComboBox;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -24,8 +25,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import testconnrapidservice.Reclamation;
-import testconnrapidservice.reclamationService;
+import entite.Reclamation;
+import service.reclamationService;
 
 
 public class Gestion_Rec_Cote_AdminController {
@@ -35,7 +36,7 @@ public class Gestion_Rec_Cote_AdminController {
     @FXML
     private Label lblHeure;
     @FXML
-    private ComboBox<String> listprest;
+    private JFXComboBox<String> listprest;
     @FXML
     private Label response;
     

@@ -1,6 +1,7 @@
 
 package view_cote_admin;
 
+import com.jfoenix.controls.JFXComboBox;
 import java.sql.SQLException;
 import java.util.List;
 import javafx.event.ActionEvent;
@@ -10,7 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-import testconnrapidservice.reclamationService;
+import service.reclamationService;
 
 
 public class Supprimer_rec_cote_adminController  {
@@ -18,7 +19,7 @@ public class Supprimer_rec_cote_adminController  {
     @FXML
     private Label response;
     @FXML
-    private ComboBox<String> list_id;
+    private JFXComboBox<String> list_id;
     
     @FXML
     private Button btnsupp;

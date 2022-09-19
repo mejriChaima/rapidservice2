@@ -1,0 +1,68 @@
+
+.login-bg{
+    
+    -fx-background-color: linear-gradient(to bottom right, #e5e7e9,#797d7f);
+}
+
+
+.backinterface{
+    
+    -fx-background-color: linear-gradient(#2874a6,#797d7f);
+}
+.login-card{
+    
+    
+    -fx-background-color:   #2874a6;
+
+}
+.textfield-design{
+    
+    
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 20px;
+    -fx-border-color: #5d6d7e;
+    -fx-border-radius: 20px;
+    -fx-text-inner-color:#000;
+}
+.button-design{
+    -fx-background-color:  #2874a6;
+
+
+    -fx-background-radius: 40px;
+    -fx-text-fill: #000;
+    -fx-cursor: hand;
+      
+}
+.button-design:hover{
+    -fx-background-color: #6a9ae7;
+    -fx-text-fill: #fff;
+    
+}
+
+
+
+
+/*.hypertext-design{
+    -fx-text-fill: #000;
+    -fx-border-color: none;
+    -fx-border-width: 0px;   
+}*/
+.hypertext-design:hover{
+     -fx-text-fill: #fff;
+    
+}
+ .marco{
+    -fx-text-fill:   #b3b6b7;
+    -fx-cursor: hand;
+}
+.exit{
+    -fx-backgroud-color:#c21e1e;
+    -fx-background-radius: 50px;
+
+-fx-cursor: hand;
+}
+.exit:hover{
+    -fx-backgroud-color:#FA8072;
+}
+ 
+

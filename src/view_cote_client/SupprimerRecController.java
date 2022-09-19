@@ -1,6 +1,7 @@
 
 package view_cote_client;
 
+import com.jfoenix.controls.JFXComboBox;
 import java.net.URL;
 import java.sql.SQLException;
 import java.text.SimpleDateFormat;
@@ -19,11 +20,12 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
+import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.SingleSelectionModel;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import testconnrapidservice.reclamationService;
+import service.reclamationService;
 
 
 public class SupprimerRecController implements Initializable {
@@ -36,9 +38,10 @@ public class SupprimerRecController implements Initializable {
     private Label lblDate;
     @FXML
     private Label lblHeure;
+     @FXML private Hyperlink log_out;
+     @FXML private Label welcome_user;
     @FXML
-    private ComboBox<String> reclamationId;
-
+    private JFXComboBox<String> reclamationId;
     private Alert alertsupp= new Alert(Alert.AlertType.INFORMATION);
    
     @Override

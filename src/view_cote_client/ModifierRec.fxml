@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import com.jfoenix.controls.JFXDatePicker?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="477.0" prefWidth="942.0" style="-fx-background-color: #5097A4;" styleClass="linear-Apane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_client.ModifierRecController">
+<AnchorPane prefHeight="477.0" prefWidth="942.0" styleClass="backinterface" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_client.ModifierRecController">
    <children>
       <Label alignment="CENTER" layoutX="3.0" layoutY="5.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" text="Modifier reclamation" textFill="#220000">
          <font>
             <Font name="Verdana Bold" size="41.0" />
          </font>
       </Label>
-      <Pane layoutX="14.0" layoutY="57.0" prefHeight="391.0" prefWidth="920.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+      <Pane layoutX="11.0" layoutY="72.0" prefHeight="391.0" prefWidth="920.0" style="-fx-background-color: white; -fx-background-radius: 20;">
          <children>
-            <Button fx:id="btnConf_Modif_Reclamation" layoutX="817.0" layoutY="346.0" mnemonicParsing="false" onAction="#Confirmer_Modif_Rec_On_Action" text="Confirmer" />
-            <Button fx:id="btnAnnuler" layoutX="728.0" layoutY="347.0" mnemonicParsing="false" onAction="#Annuler_Modifier_Rec_On_Action" prefHeight="25.0" prefWidth="75.0" text="Annuler" />
+            <Button fx:id="btnConf_Modif_Reclamation" layoutX="817.0" layoutY="346.0" mnemonicParsing="false" onAction="#Confirmer_Modif_Rec_On_Action" styleClass="button-design" stylesheets="@../style.css" text="Confirmer" />
+            <Button fx:id="btnAnnuler" layoutX="728.0" layoutY="347.0" mnemonicParsing="false" onAction="#Annuler_Modifier_Rec_On_Action" prefHeight="25.0" prefWidth="75.0" styleClass="button-design" stylesheets="@../style.css" text="Annuler" />
             <Separator layoutX="14.0" layoutY="49.0" prefHeight="2.0" prefWidth="896.0" />
             <Label fx:id="lblDate" layoutX="178.0" layoutY="11.0" prefHeight="34.0" prefWidth="127.0" text="2021-09-01">
                <font>
@@ -44,60 +48,70 @@
             </Label>
             <AnchorPane layoutX="209.0" layoutY="66.0" prefHeight="47.0" prefWidth="281.0" styleClass="textPane">
                <children>
-                  <TextField fx:id="txtNom" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="258.0" promptText="Ecrivez votre nom" styleClass="textField" />
+                  <TextField fx:id="txtNom" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="258.0" promptText="Ecrivez votre nom" styleClass="textfield-design" stylesheets="@../style.css" />
                   <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Nom:" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="499.0" layoutY="66.0" prefHeight="47.0" prefWidth="113.0" styleClass="textPane">
+            <AnchorPane layoutX="499.0" layoutY="66.0" prefHeight="47.0" prefWidth="171.0" styleClass="textPane">
                <children>
-                  <TextField fx:id="txtPrenom" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="87.0" promptText="Ecrivez votre prenom" styleClass="textField" />
-                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Prenom" />
+                  <TextField fx:id="txtPrenom" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="157.0" promptText="Ecrivez votre prenom" styleClass="textfield-design" stylesheets="@../style.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Prenom :" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="638.0" layoutY="66.0" prefHeight="47.0" prefWidth="258.0" styleClass="textPane">
+            <AnchorPane layoutX="683.0" layoutY="66.0" prefHeight="47.0" prefWidth="213.0" styleClass="textPane">
                <children>
-                  <TextField fx:id="txtTel" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="229.0" promptText="Ecrivez votre telephone" styleClass="textField" />
+                  <TextField fx:id="txtTel" layoutX="22.0" layoutY="5.0" prefHeight="37.0" prefWidth="171.0" promptText="Ecrivez votre telephone" styleClass="textfield-design" stylesheets="@../style.css" />
                   <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Tel:" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="209.0" layoutY="122.0" prefHeight="47.0" prefWidth="291.0" styleClass="textPane">
                <children>
-                  <TextField fx:id="txtMail" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="258.0" promptText="Ecrivez votre email" styleClass="textField" />
+                  <TextField fx:id="txtMail" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="258.0" promptText="Ecrivez votre email" styleClass="textfield-design" stylesheets="@../style.css" />
                   <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Mail :" />
                </children>
             </AnchorPane>
-            <AnchorPane layoutX="209.0" layoutY="188.0" prefHeight="47.0" prefWidth="245.0" styleClass="textPane">
+            <AnchorPane layoutX="209.0" layoutY="188.0" prefHeight="47.0" prefWidth="291.0" styleClass="textPane">
                <children>
-                  <TextField fx:id="txtMission" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="229.0" styleClass="textField" />
-                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Titre mission" />
+                  <TextField fx:id="txtMission" layoutX="13.0" layoutY="8.0" prefHeight="37.0" prefWidth="258.0" promptText="quel service avais vous choisis ?" styleClass="textfield-design" stylesheets="@../style.css" />
+                  <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Titre mission :" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="505.0" layoutY="187.0" prefHeight="47.0" prefWidth="391.0" styleClass="textPane">
                <children>
-                  <TextField fx:id="txtMissionDesc" layoutX="6.0" layoutY="8.0" prefHeight="37.0" prefWidth="375.0" promptText="Décrivez brievement ce qui passé" styleClass="textField" />
+                  <TextField fx:id="txtMissionDesc" layoutX="6.0" layoutY="8.0" prefHeight="37.0" prefWidth="375.0" promptText="Décrivez brievement ce qui passé" styleClass="textfield-design" stylesheets="@../style.css" />
                   <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Description Mission :" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="210.0" layoutY="247.0" prefHeight="60.0" prefWidth="229.0" styleClass="textPane">
                <children>
                   <Label layoutX="2.0" layoutY="-9.0" styleClass="textLabel" text="Date mission :" AnchorPane.topAnchor="3.0" />
-                  <JFXDatePicker fx:id="txtDate" layoutX="14.0" layoutY="29.0" />
+                  <JFXDatePicker fx:id="txtDate" layoutX="29.0" layoutY="30.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="514.0" layoutY="247.0" prefHeight="78.0" prefWidth="199.0">
                <children>
                   <Label text="Nom prestataire :" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <ComboBox fx:id="txtNomPrestataire" layoutX="11.0" layoutY="27.0" prefWidth="150.0" />
-                  <Label layoutX="99.0" prefHeight="17.0" prefWidth="82.0" text="xx" />
+                  <Label layoutX="99.0" prefHeight="17.0" prefWidth="82.0" />
+                  <JFXComboBox fx:id="txtNomPrestataire" layoutX="18.0" layoutY="27.0" />
                </children>
             </AnchorPane>
             <AnchorPane layoutX="704.0" layoutY="247.0" prefHeight="78.0" prefWidth="199.0">
                <children>
                   <Label layoutX="20.0" text="Id reclamation :" />
-                  <ComboBox fx:id="reclamationId" layoutX="19.0" layoutY="27.0" prefHeight="25.0" prefWidth="150.0" />
+                  <JFXComboBox fx:id="reclamationId" layoutX="33.0" layoutY="27.0" />
                </children>
             </AnchorPane>
          </children>
       </Pane>
+      <Hyperlink fx:id="log_out" layoutX="863.0" layoutY="20.0" styleClass="hypertext-design" stylesheets="@../style.css" text="LogOut" textFill="#070707" />
+      <Label fx:id="welcome_user" layoutX="735.0" layoutY="23.0" text="Welcome : username" textFill="#070707" />
+      <ImageView fitHeight="60.0" fitWidth="82.0" layoutX="14.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Logo.PNG" />
+         </image>
+      </ImageView>
    </children>
+   <cursor>
+      <Cursor fx:constant="S_RESIZE" />
+   </cursor>
 </AnchorPane>

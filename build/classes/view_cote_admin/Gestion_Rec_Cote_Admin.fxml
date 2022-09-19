@@ -5,11 +5,13 @@
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="715.0" prefWidth="942.0" style="-fx-background-color: #5097A4;" styleClass="linear-Apane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_admin.Gestion_Rec_Cote_AdminController">
+<AnchorPane prefHeight="715.0" prefWidth="942.0" styleClass="backinterface" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_admin.Gestion_Rec_Cote_AdminController">
    <children>
       <Label alignment="CENTER" layoutX="3.0" layoutY="5.0" prefHeight="52.0" prefWidth="936.0" styleClass="linear-titleN" text="gestion des reclamations" textFill="#220000">
          <font>
@@ -39,8 +41,8 @@
                   <Font name="System Bold" size="22.0" />
                </font>
             </Label>
-            <Button fx:id="btnListeRec" layoutX="55.0" layoutY="158.0" mnemonicParsing="false" onAction="#remplirTab" prefHeight="25.0" prefWidth="149.0" text="Charger la liste des reclamations" />
-            <Button fx:id="btnAjoutReclamation" layoutX="697.0" layoutY="158.0" mnemonicParsing="false" onAction="#Supp_Rec_On_Action" text="Supprimer une reclamation" />
+            <Button fx:id="btnListeRec" layoutX="55.0" layoutY="158.0" mnemonicParsing="false" onAction="#remplirTab" prefHeight="25.0" prefWidth="205.0" styleClass="button-design" stylesheets="@../style.css" text="Charger la liste des reclamations" />
+            <Button fx:id="btnAjoutReclamation" layoutX="697.0" layoutY="158.0" mnemonicParsing="false" onAction="#Supp_Rec_On_Action" styleClass="button-design" stylesheets="@../style.css" text="Supprimer une reclamation" />
          </children>
       </Pane>
       <TableView fx:id="tableReclamation" layoutX="12.0" layoutY="299.0" prefHeight="409.0" prefWidth="928.0">
@@ -56,5 +58,10 @@
             <TableColumn fx:id="colDescM" prefWidth="237.0" text="Description mission" />
          </columns>
       </TableView>
+      <ImageView fitHeight="46.0" fitWidth="92.0" layoutX="25.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Logo.PNG" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>

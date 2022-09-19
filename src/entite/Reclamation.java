@@ -1,5 +1,5 @@
 
-package testconnrapidservice;
+package entite;
 
 import java.util.Date;
 import javafx.scene.control.SingleSelectionModel;

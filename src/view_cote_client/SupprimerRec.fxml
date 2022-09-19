@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXComboBox?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="355.0" prefWidth="817.0" style="-fx-background-color: #5097A4;" styleClass="linear-Apane" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_client.SupprimerRecController">
+<AnchorPane prefHeight="355.0" prefWidth="817.0" styleClass="backinterface" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_client.SupprimerRecController">
    <children>
       <Label alignment="CENTER" layoutX="3.0" layoutY="5.0" prefHeight="52.0" prefWidth="811.0" styleClass="linear-titleN" text="Supprimer une reclamation" textFill="#220000">
          <font>
@@ -17,8 +20,8 @@
       </Label>
       <Pane layoutX="99.0" layoutY="57.0" prefHeight="258.0" prefWidth="661.0" style="-fx-background-color: white; -fx-background-radius: 20;">
          <children>
-            <Button fx:id="btnConf_Modif_Reclamation" layoutX="543.0" layoutY="215.0" mnemonicParsing="false" onAction="#Confirmer_Modif_Rec_On_Action" text="Confirmer" />
-            <Button fx:id="btnAnnuler" layoutX="441.0" layoutY="215.0" mnemonicParsing="false" onAction="#Annuler_Modifier_Rec_On_Action" prefHeight="25.0" prefWidth="75.0" text="Annuler" />
+            <Button fx:id="btnConf_Modif_Reclamation" layoutX="543.0" layoutY="215.0" mnemonicParsing="false" onAction="#Confirmer_Modif_Rec_On_Action" styleClass="button-design" stylesheets="@../style.css" text="Confirmer" />
+            <Button fx:id="btnAnnuler" layoutX="441.0" layoutY="215.0" mnemonicParsing="false" onAction="#Annuler_Modifier_Rec_On_Action" prefHeight="25.0" prefWidth="75.0" styleClass="button-design" stylesheets="@../style.css" text="Annuler" />
             <Separator layoutX="14.0" layoutY="50.0" prefHeight="4.0" prefWidth="620.0" />
             <Label fx:id="lblDate" layoutX="178.0" layoutY="11.0" prefHeight="34.0" prefWidth="127.0" text="2021-09-01">
                <font>
@@ -42,7 +45,7 @@
             </Label>
             <AnchorPane layoutX="242.0" layoutY="137.0" prefHeight="78.0" prefWidth="199.0">
                <children>
-                  <ComboBox fx:id="reclamationId" layoutX="19.0" layoutY="27.0" prefHeight="25.0" prefWidth="150.0" />
+                  <JFXComboBox fx:id="reclamationId" layoutX="66.0" layoutY="27.0" />
                </children>
             </AnchorPane>
             <Label layoutX="155.0" layoutY="109.0" text="veuillez choisir l'id de reclamation a supprimer :">
@@ -52,5 +55,12 @@
             </Label>
          </children>
       </Pane>
+      <Hyperlink fx:id="log_out" layoutX="822.0" layoutY="14.0" styleClass="hypertext-design" stylesheets="@../style.css" text="LogOut" textFill="#070707" />
+      <Label fx:id="welcome_user" layoutX="694.0" layoutY="17.0" text="Welcome : username" textFill="#070707" />
+      <ImageView fitHeight="47.0" fitWidth="79.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Logo.PNG" />
+         </image>
+      </ImageView>
    </children>
 </AnchorPane>
