@@ -2,10 +2,12 @@
 package testconnrapidservice;
 
 import entite.Reclamation;
+import entite.commentaire;
 import service.reclamationService;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import service.commentaireService;
 
 
 public class TestConnRapidService {
@@ -135,12 +137,28 @@ public class TestConnRapidService {
 //      Reclamation recann = new Reclamation("abidi","Jihen","abidi.jihen@gmail.com",22222222,"Jardinage","15-03-2022","ZZ","Mal fait");
 //        
 //      recservice.updateReclamation(recann,42);
+//
+//
+// ArrayList<Reclamation> listReclamations =recservice.getAllReclamation();    
+//            for(int i = 0; i< listReclamations.size(); i++) {
+//    		
+//    			System.out.println(listReclamations.get(i));
+//    	}
 
 
- ArrayList<Reclamation> listReclamations =recservice.getAllReclamation();    
-            for(int i = 0; i< listReclamations.size(); i++) {
+
+
+
+commentaireService comserv = new commentaireService();
+commentaire cm1 = new commentaire("beau travail","02-02-2022");
+comserv.saveCommentaire2(cm1);
+
+
+     ArrayList<commentaire> listCommentaires =comserv.getAllCommentaires();    
+            for(int i = 0; i< listCommentaires.size(); i++) {
     		
-    			System.out.println(listReclamations.get(i));
+    			System.out.println(listCommentaires.get(i));
     	}
+
     }
 }

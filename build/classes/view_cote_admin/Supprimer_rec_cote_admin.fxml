@@ -19,11 +19,11 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="response" layoutX="115.0" />
                   <JFXComboBox fx:id="list_id" layoutX="87.0" layoutY="27.0" />
                </children>
             </AnchorPane>
             <Hyperlink layoutX="335.0" layoutY="13.0" onAction="#close_on_action" text="Retour" />
+            <Label fx:id="response" layoutX="71.0" layoutY="134.0" prefHeight="25.0" prefWidth="286.0" />
          </children>
       </Pane>
       <Button fx:id="btnsupp" layoutX="327.0" layoutY="127.0" mnemonicParsing="false" onAction="#supp_rec_on_action" styleClass="button-design" stylesheets="@../style.css" text="confirmer" />

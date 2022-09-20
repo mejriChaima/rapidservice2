@@ -42,7 +42,7 @@ public class Supprimer_rec_cote_adminController  {
      
        String recId = list_id.getValue(); 
        int id=Integer.parseInt(recId);
-       response.setText("supprimer la reclamation n :"+recId);
+       response.setText("Voulez-vous supprimer une autre reclamation ?");
      reclamationService recservice= new reclamationService();
       recservice.deleteReclamation(id);
       alertSupp.setTitle("supprimer reclamation");

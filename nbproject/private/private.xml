@@ -3,19 +3,23 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/BD/DataSource.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/entite/commentaire.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_admin/EspaceAdmin.fxml</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_client/SupprimerRecController.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_admin/EspaceAdminController.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_admin/Gestion_commentaire_adminController.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/testconnrapidservice/FXMain.java</file>
-            <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_admin/Supprimer_rec_cote_admin.fxml</file>
-            <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/testconnrapidservice/reclamationService.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_client/EspaceClientController.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/service/commentaireService.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/testconnrapidservice/maintestadmin.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_admin/Supprimer_rec_cote_adminController.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_admin/Gestion_Rec_Cote_AdminController.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_client/ModifierRecController.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_client/AjoutReclamationController.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/testconnrapidservice/TestConnRapidService.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/view_cote_admin/Gestion_Rec_Cote_Admin.fxml</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/SceneBuilder/TestConnRapidService/src/service/reclamationService.java</file>
         </group>
     </open-files>
 </project-private>

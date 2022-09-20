@@ -87,7 +87,7 @@ public class SupprimerRecController implements Initializable {
         reclamationService recservice= new reclamationService();
         SingleSelectionModel<String> idchoisie= reclamationId.getSelectionModel();
         recservice.deleteReclamation( Integer.parseInt(idchoisie.getSelectedItem()));
-    
+        idchoisie.clearSelection();
         alertsupp.setTitle("Infos");
             alertsupp.setHeaderText(null);
             alertsupp.setContentText("Suppression de reclamation valide");

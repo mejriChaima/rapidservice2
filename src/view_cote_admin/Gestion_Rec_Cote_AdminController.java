@@ -26,6 +26,7 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 import entite.Reclamation;
+import javafx.scene.control.Button;
 import service.reclamationService;
 
 
@@ -35,10 +36,6 @@ public class Gestion_Rec_Cote_AdminController {
     private Label lblDate;
     @FXML
     private Label lblHeure;
-    @FXML
-    private JFXComboBox<String> listprest;
-    @FXML
-    private Label response;
     
      @FXML
     private TableView<Reclamation> tableReclamation;
@@ -73,6 +70,10 @@ public class Gestion_Rec_Cote_AdminController {
         private FXMLLoader fxmlLoader = null;
         private Parent root1=null;
         private Stage stage=null;
+    @FXML
+    private Button btnListeRec;
+    @FXML
+    private Button btnAjoutReclamation;
   
     public void initialize() {
          loadDateAndTime();

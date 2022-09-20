@@ -25,6 +25,19 @@ public class EspaceAdminController {
         primaryStage.show();
 
     }
+
+    @FXML
+    private void gestion_commentaire_on_action(ActionEvent event) throws IOException {
+        Stage primaryStage= new Stage() ;
+        Parent root = FXMLLoader.load(getClass().getResource("../view_cote_admin/Gestion_commentaire_admin.fxml"));
+        primaryStage.setTitle("Gérer les commentaires ");
+        primaryStage.setScene(new Scene(root));
+        primaryStage.show();
+    }
+
+    @FXML
+    private void gestion_statistique_on_action(ActionEvent event) {
+    }
         
     
 }
