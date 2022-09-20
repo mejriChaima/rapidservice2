@@ -4,7 +4,7 @@
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_admin.EspaceAdminController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Button layoutX="260.0" layoutY="188.0" mnemonicParsing="false" onAction="#gestionReclamation_Admin_OnAction" text="Gerer les reclamations" />
       <Hyperlink layoutX="283.0" layoutY="242.0" onAction="#gestion_commentaire_on_action" text="gerer les commentaires" />

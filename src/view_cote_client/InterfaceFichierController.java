@@ -6,12 +6,11 @@ import java.util.ResourceBundle;
 import javafx.fxml.Initializable;
 
 
-public class EspacePrestataireController implements Initializable {
+public class InterfaceFichierController implements Initializable {
 
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-       
+        
     }    
     
 }
