@@ -35,13 +35,13 @@ public class Supprimer_rec_cote_adminController  {
 //       System.out.println( getid());
     } 
     
-    
+    int id ;
 
     @FXML
     private void supp_rec_on_action(ActionEvent event) throws SQLException, ClassNotFoundException {
      
        String recId = list_id.getValue(); 
-       int id=Integer.parseInt(recId);
+        id=Integer.parseInt(recId);
        response.setText("Voulez-vous supprimer une autre reclamation ?");
      reclamationService recservice= new reclamationService();
       recservice.deleteReclamation(id);

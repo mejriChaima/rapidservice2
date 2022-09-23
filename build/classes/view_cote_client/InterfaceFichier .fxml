@@ -6,15 +6,15 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_client.EspacePrestataireController">
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view_cote_client.InterfaceFichierController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="161.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../images/plomberie.jpg" />
          </image>
       </ImageView>
-      <Hyperlink layoutX="83.0" layoutY="177.0" text="ajouter commentaire" />
-      <Label layoutX="83.0" layoutY="224.0" prefHeight="17.0" prefWidth="191.0" text="Ecrivez un commentaire ....." />
-      <Hyperlink layoutX="391.0" layoutY="221.0" prefHeight="23.0" prefWidth="167.0" text="Supprimer ce commentaire" />
+      <Hyperlink layoutX="83.0" layoutY="177.0" onAction="#ajout_commentaire_on_action" text="ajouter commentaire" />
+      <Label fx:id="response" layoutX="83.0" layoutY="224.0" prefHeight="17.0" prefWidth="191.0" text="Ecrivez un commentaire ....." />
+      <Hyperlink layoutX="391.0" layoutY="221.0" onAction="#supp_commmentaire_on_action" prefHeight="23.0" prefWidth="167.0" text="Supprimer ce commentaire" />
    </children>
 </AnchorPane>

@@ -9,6 +9,7 @@
         <URL value="@espaceclient.css" />
     </stylesheets>
    <children>
-      <Button layoutX="177.0" layoutY="175.0" mnemonicParsing="false" onAction="#gestionReclamation_OnAction" text="Gérer mes reclamations" />
+      <Button fx:id="btn_gerer_rec" layoutX="177.0" layoutY="175.0" mnemonicParsing="false" onAction="#gestionReclamation_OnAction" text="Gérer mes reclamations" />
+      <Button fx:id="btn_gerer_commentaire" layoutX="186.0" layoutY="259.0" mnemonicParsing="false" onAction="#gestionComm" text="Gérer mes commentaires" />
    </children>
 </AnchorPane>
