@@ -45,6 +45,8 @@ import javafx.util.Duration;
 import BD.DataSource;
 import com.jfoenix.controls.JFXComboBox;
 import entite.Reclamation;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import service.reclamationService;
 
 
@@ -108,7 +110,8 @@ public class AjoutReclamationController implements Initializable {
     private Label welcome_user;
     
     private Alert alertAjout = new Alert(Alert.AlertType.INFORMATION);
-    
+     private Alert alertChampVide = new Alert(Alert.AlertType.INFORMATION);
+     private Alert alertChampIncorrecte = new Alert(Alert.AlertType.INFORMATION);
      private Connection cnx;
     private Statement ste;
     private PreparedStatement pst;
@@ -150,6 +153,38 @@ public class AjoutReclamationController implements Initializable {
            response.setText(" :"+newVal);
         });
 //       adate=ConversionDate_string();
+        
+        
+        
+        if (txtNom.getText().isEmpty()||
+                txtPrenom.getText().isEmpty()||
+                txtMail.getText().isEmpty()||
+                txtTel.getText().isEmpty()||
+                txtMission.getText().isEmpty()||
+               txtDate.getEditor().getText().isEmpty()||
+                nomchoisie.getSelectedItem().isEmpty()||
+                txtMissionDesc.getText().isEmpty()
+                )
+        {
+        alertChampVide.setTitle("Infos");
+            alertChampVide.setHeaderText(null);
+            alertChampVide.setContentText("Svp remplir tout les champs");
+            alertChampVide.showAndWait();
+        }
+        else if (!ValideteEmail()||
+                (txtNom.getText().matches("[a-zA-Z0-9{4,}]"))
+                
+                )
+        {
+            alertChampIncorrecte.setTitle("Infos");
+            alertChampIncorrecte .setHeaderText(null);
+            alertChampIncorrecte .setContentText(" SVP Verifier les champs invalides  ");
+            alertChampIncorrecte .showAndWait();
+        }
+            
+            
+        else    
+        {
         Reclamation rec;
         rec = new Reclamation(txtNom.getText(),
                 txtPrenom.getText(),
@@ -160,13 +195,13 @@ public class AjoutReclamationController implements Initializable {
                 nomchoisie.getSelectedItem(),
                 txtMissionDesc.getText()
         );
-        
         recservice.saveReclamation(rec);
-        clearAllData();
+        //clearAllData();
         alertAjout.setTitle("Infos");
             alertAjout.setHeaderText(null);
             alertAjout.setContentText("Insetion des informations valide");
             alertAjout.showAndWait();
+        }
     }
        
     
@@ -291,4 +326,28 @@ public class AjoutReclamationController implements Initializable {
                 }
     
 }
+      private boolean ValideteEmail(){
+
+        String regex = "^([_a-zA-Z0-9-]+(\\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\\.[a-zA-Z0-9-]+)*(\\.[a-zA-Z]{1,6}))?$";
+ 
+        Pattern pattern = Pattern.compile(regex);
+        Matcher matcher = pattern.matcher(txtMail.getText());
+        return matcher.matches();
+    /*
+        
+        Pattern p =Pattern.compile(" [a-zA-Z0-9] [a-zA-Z0-9._] *@[a-zA-Z0-9]+ ([.][a-zA-Z0-9._]+)+");
+        Matcher m =p.matcher(mailc.getText());
+        if( m.find() && m.group().equals(mailc.getText())){
+         return true;
+        
+        }else {
+        
+        
+        Alert alert = new Alert(AlertType.WARNING);
+        alert.setTitle("Email valide");
+        alert.setContentText("SVP Entrez vous un Email Valide");
+        alert.showAndWait();
+       
+        return false;*/
+    }
 }

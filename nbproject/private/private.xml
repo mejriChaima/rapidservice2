@@ -3,23 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/AjoutReclamationController.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/testconnrapidservice/TestConnRapidService.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/entite/commentaire.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_admin/Gestion_Rec_Cote_AdminController.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_admin/EspaceAdminController.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/service/commentaireService.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_admin/Supprimer_rec_cote_adminController.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/Gestion_commentaire_Controller.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/service/reclamationService.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_admin/Gestion_commentaire_adminController.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/InterfaceFichier%20.fxml</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/espaceclient.css</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/InterfaceFichierController.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/SupprimerRecController.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/testconnrapidservice/maintestadmin.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/testconnrapidservice/FXMain.java</file>
-            <file>file:/C:/Users/Elife-beja-099/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/ModifierRecController.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_admin/Gestion_Rec_Cote_AdminController.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/Gestion_commentaire_Controller.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_admin/EspaceAdminController.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/EspaceClientController.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/testconnrapidservice/FXMain.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/AjoutReclamationController.java</file>
         </group>
     </open-files>
 </project-private>

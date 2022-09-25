@@ -68,7 +68,7 @@ public class ModifierRecController implements Initializable {
             loadDateAndTime();
             loadNomsPrestataire();
             loadIdReclamation();
-
+         
         } catch (SQLException ex) {
             Logger.getLogger(ModifierRecController.class.getName()).log(Level.SEVERE, null, ex);
         } catch (ClassNotFoundException ex) {
