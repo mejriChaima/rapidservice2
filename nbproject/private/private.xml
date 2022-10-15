@@ -5,8 +5,10 @@
         <group>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_admin/Gestion_Rec_Cote_AdminController.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/Gestion_commentaire_Controller.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/service/reclamationService.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_admin/EspaceAdminController.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/EspaceClientController.java</file>
+            <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/ModifierRecController.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/testconnrapidservice/FXMain.java</file>
             <file>file:/C:/Users/til/Documents/NetBeansProjects/TestConnRapidService/src/view_cote_client/AjoutReclamationController.java</file>
         </group>

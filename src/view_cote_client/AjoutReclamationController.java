@@ -196,7 +196,7 @@ public class AjoutReclamationController implements Initializable {
                 txtMissionDesc.getText()
         );
         recservice.saveReclamation(rec);
-        //clearAllData();
+        clearAllData();
         alertAjout.setTitle("Infos");
             alertAjout.setHeaderText(null);
             alertAjout.setContentText("Insetion des informations valide");
